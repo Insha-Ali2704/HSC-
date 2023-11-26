@@ -107,34 +107,29 @@ def showcontact():
     canvas.update_idletasks()
     canvas.config(yscrollcommand=scrollbar.set)
     canvas.bind('<Configure>', lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
-    #aexecutequerrying logo
-    # img_hsc=Image.open("hsc.png") 
-    # resized_img_hsc=img_hsc.resize((220,120),Image.LANCZOS)
-    # photo_hsc=ImageTk.PhotoImage(resized_img_hsc)
-    # L1=Label(canvas,image=photo_hsc,bg="dark blue")
-    # L1.place(x=5,y=0)
-    #navigation bar
+    
     logo=image1(contactframe,"hsc.png",130,55,255,100,100)
     navbar(contactframe)
     window=image1(contactframe,"30.jpg",screenwidth/2,150,screenwidth,300,970)
 
-    Label(contactframe,text="Contact Us",bg="dark slate gray",fg="white",font="Bernard_MT 30 underline",justify=CENTER).place(x=50,y=450)
+    Label(contactframe,text="Contact  Us",bg="dark slate gray",fg="white",font="Bernard_MT 30 underline",justify=CENTER).place(x=250,y=450)
 
-    Label(contactframe,text='''Enter Your detail. Hope we will connect with you soon.''',fg="black",bg="light skyblue3",font="Candara 20 italic").place(x=50,y=520)
-    Label(contactframe,text="Name:- ",fg="black",bg="dark green",font="Candara 20 italic").place(x=250,y=600)
-    Label(contactframe,text="Email:- ",fg="black",bg="dark green",font="Candara 20 italic").place(x=250,y=650)
-    Label(contactframe,text="Phone No:- ",fg="black",bg="dark green",font="Candara 20 italic").place(x=250,y=700)
-    Label(contactframe,text="Class:- ",fg="black",bg="dark green",font="Candara 20 italic").place(x=250,y=750)
+    Label(contactframe,text="Mail ID :  ",fg="black",bg="light skyblue3",font="Candara 20 italic").place(x=250,y=600)
+    Label(contactframe,text="hscdelhi@hotmail.com ",fg="black",bg="light skyblue4",font="Candara 20 italic").place(x=250,y=650)
+    Label(contactframe,text="Phone No :  ",fg="black",bg="light skyblue3",font="Candara 20 italic").place(x=250,y=700)
+    Label(contactframe,text="7669168904",fg="black",bg="light skyblue4",font="Candara 20 italic").place(x=250,y=750)
+    Label(contactframe,text="Address : ",fg="black",bg="lightblue3",font="Candara 20 italic").place(x=250,y=800)
+    Label(contactframe,text='''Talimabad,Lane 15,Sangam Vihar,New Delhi-110080''',fg="black",bg="lightblue4",font="Candara 20 italic").place(x=250,y=850)
+    def mapp():
+        webbrowser.open('''https://www.google.com/maps/place/
+        Hamdard+Public+School/@28.506027,77.251025,16z/data
+        =!4m6!3m5!1s0x390ce11195555555:0x2ad021cc33defb58!
+        8m2!3d28.5060265!4d77.2510252!16s%2Fg%2F11c3mpc9hh?hl=en&entry=ttu''')
+    Button(contactframe,text='''Show maps''',fg="black",bg="lightblue3",font="Candara 15 italic",command=mapp,cursor='hand2').place(x=250,y=900)
 
-    Entry(contactframe,width=30,font="20").place(x=450,y=600)
-    Entry(contactframe,width=30,font="20").place(x=450,y=650)
-    Entry(contactframe,width=30,font="20").place(x=450,y=700)
-    Entry(contactframe,width=30,font="20").place(x=450,y=750)
-    Button(contactframe,text="SUBMIT",padx=20,pady=20,bg="black",fg="white").place(x=450,y=850)
 
-
-    copyright = Label(contactframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=50)
-    copyright.place(x=0,y=970)
+    copyright = Label(contactframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=5)
+    copyright.place(x=0,y=1045)
     contact.mainloop()
 def showcofounder():
     pageclose()
@@ -161,13 +156,6 @@ def showcofounder():
     canvas.config(yscrollcommand=scrollbar.set)
     canvas.bind('<Configure>', lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
 
-    #aexecutequerrying logo
-    # img_hsc=Image.open("hsc.png") 
-    # resized_img_hsc=img_hsc.resize((220,120),Image.LANCZOS)
-    # photo_hsc=ImageTk.PhotoImage(resized_img_hsc)
-    # L1=Label(coFounderframe,image=photo_hsc,bg="dark blue")
-    # L1.place(x=5,y=0)
-    #navigation bar
     logo=image1(coFounderframe,"hsc.png",130,55,255,100,100)
     navbar(coFounderframe)
     window=image1(coFounderframe,"f.jpg",screenwidth/2,60,screenwidth,550,300)
@@ -224,12 +212,6 @@ def showcofounder():
     irreparable loss.'''
         ,fg="black",font="Calibri 15").place(x=40,y=550)
 
-    # co_founder=Image.open("co-founder.jpg") 
-    # resized_co_founder=co_founder.resize((350,380),Image.LANCZOS)
-    # photo_co_founder=ImageTk.PhotoImage(resized_co_founder)
-    # L2=Label(coFounderframe,image=photo_co_founder,bg="dark blue")
-    # L2.place(x=980,y=460)
-
 
     Label(coFounderframe,text="-External Links",bg="dark slate gray",fg="white",font="Bernard_MT 30 underline").place(x=910,y=660)
 
@@ -251,18 +233,18 @@ def showcofounder():
         webbrowser.open("https://www.twn.my/")
     def ps():
         webbrowser.open("https://www.project-syndicate.org/")
-    Button(coFounderframe,text="Union Public Service Commission",command=upsc,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=730)
-    Button(coFounderframe,text="Down to Earth",command=down_to_earth,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=770)
-    Button(coFounderframe,text="Press Information Bureau",command=pib,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=810)
-    Button(coFounderframe,text='''Department of Administrative Reforms
+    Button(coFounderframe,cursor='hand2',text="Union Public Service Commission",command=upsc,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=730)
+    Button(coFounderframe,cursor='hand2',text="Down to Earth",command=down_to_earth,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=770)
+    Button(coFounderframe,cursor='hand2',text="Press Information Bureau",command=pib,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=810)
+    Button(coFounderframe,cursor='hand2',text='''Department of Administrative Reforms
     and Public Grievances''',command=darpg,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=850)
-    Button(coFounderframe,text='''Lal Bahadur Shastri National
+    Button(coFounderframe,cursor='hand2',text='''Lal Bahadur Shastri National
         Academy of Administration''',command=lbsnaa,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=910)
-    Button(coFounderframe,text='''United Nations Framework
+    Button(coFounderframe,cursor='hand2',text='''United Nations Framework
     Convention on Climate Change''',command=unfccc,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=970)
-    Button(coFounderframe,text="World Bank",command=wb,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=1030)
-    Button(coFounderframe,text="Third World Network",command=twn,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=1070)
-    Button(coFounderframe,text="Project Syndicate",command=ps,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=1110)
+    Button(coFounderframe,cursor='hand2',text="World Bank",command=wb,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=1030)
+    Button(coFounderframe,cursor='hand2',text="Third World Network",command=twn,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=1070)
+    Button(coFounderframe,cursor='hand2',text="Project Syndicate",command=ps,width=30,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=910,y=1110)
 
 
     copyright = Label(coFounderframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=50)
@@ -324,13 +306,6 @@ def showadvisory():
     Label(advcframe,text="Prof. Abdul Nafey",bg="azure4",fg="dark blue",font="Broadway 20").place(x=56,y=1230)
     Label(advcframe,text="-School of International Studies",fg="black",font="Calibri 15").place(x=56,y=1280)
     Label(advcframe,text="-Jawaharlal Nehru University, New Delhi  ",fg="black",font="Calibri 15").place(x=56,y=1330)
-
-    Label(advcframe,text='''
-    The Hamdard Study Circle (HSC) was set up in 1991
-    by Janab Hakeem Abdul Hameed Saheb together
-    with Janab Saiyid Hamid Saheb for coaching candidates from
-    minority communities and backward classes for the
-    Indian Civil Services.''',fg="black",bg="lavender",font="Calibri 22",width=40).place(x=600,y=1110)
     Label(advcframe,text="-External Links",bg="dark slate gray",fg="white",font="Bernard_MT 30 underline").place(x=790,y=460)
     def upsc():
         webbrowser.open("https://upsc.gov.in/")
@@ -350,18 +325,18 @@ def showadvisory():
         webbrowser.open("https://www.twn.my/")
     def ps():
         webbrowser.open("https://www.project-syndicate.org/")
-    Button(advcframe,text="Union Public Service Commission",command=upsc,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=520)
-    Button(advcframe,text="Down to Earth",command=down_to_earth,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=580)
-    Button(advcframe,text="Press Information Bureau",command=pib,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=640)
-    Button(advcframe,text='''Department of Administrative Reforms
+    Button(advcframe,cursor='hand2',text="Union Public Service Commission",command=upsc,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=520)
+    Button(advcframe,cursor='hand2',text="Down to Earth",command=down_to_earth,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=580)
+    Button(advcframe,cursor='hand2',text="Press Information Bureau",command=pib,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=640)
+    Button(advcframe,cursor='hand2',text='''Department of Administrative Reforms
     and Public Grievances''',command=darpg,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=700)
-    Button(advcframe,text='''Lal Bahadur Shastri National
+    Button(advcframe,cursor='hand2',text='''Lal Bahadur Shastri National
         Academy of Administration''',command=lbsnaa,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=780)
-    Button(advcframe,text='''United Nations Framework
+    Button(advcframe,cursor='hand2',text='''United Nations Framework
     Convention on Climate Change''',command=unfccc,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=860)
-    Button(advcframe,text="World Bank",command=wb,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=940)
-    Button(advcframe,text="Third World Network",command=twn,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1000)
-    Button(advcframe,text="Project Syndicate",command=ps,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1060)
+    Button(advcframe,cursor='hand2',text="World Bank",command=wb,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=940)
+    Button(advcframe,cursor='hand2',text="Third World Network",command=twn,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1000)
+    Button(advcframe,cursor='hand2',text="Project Syndicate",command=ps,width=25,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1060)
 
     copyright = Label(advcframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=50)
     copyright.place(x=0,y=1400)
@@ -436,18 +411,18 @@ def showachievement():
         webbrowser.open("https://www.twn.my/")
     def ps():
         webbrowser.open("https://www.project-syndicate.org/")
-    Button(achframe,text="Union Public Service Commission",command=upsc,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=520)
-    Button(achframe,text="Down to Earth",command=down_to_earth,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=580)
-    Button(achframe,text="Press Information Bureau",command=pib,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=640)
-    Button(achframe,text='''Department of Administrative Reforms
+    Button(achframe,cursor='hand2',text="Union Public Service Commission",command=upsc,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=520)
+    Button(achframe,cursor='hand2',text="Down to Earth",command=down_to_earth,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=580)
+    Button(achframe,cursor='hand2',text="Press Information Bureau",command=pib,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=640)
+    Button(achframe,cursor='hand2',text='''Department of Administrative Reforms
     and Public Grievances''',command=darpg,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=700)
-    Button(achframe,text='''Lal Bahadur Shastri National
+    Button(achframe,cursor='hand2',text='''Lal Bahadur Shastri National
         Academy of Administration''',command=lbsnaa,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=780)
-    Button(achframe,text='''United Nations Framework
+    Button(achframe,cursor='hand2',text='''United Nations Framework
     Convention on Climate Change''',command=unfccc,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=860)
-    Button(achframe,text="World Bank",command=wb,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=940)
-    Button(achframe,text="Third World Network",command=twn,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1000)
-    Button(achframe,text="Project Syndicate",command=ps,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1060)
+    Button(achframe,cursor='hand2',text="World Bank",command=wb,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=940)
+    Button(achframe,cursor='hand2',text="Third World Network",command=twn,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1000)
+    Button(achframe,cursor='hand2',text="Project Syndicate",command=ps,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1060)
 
     copyright = Label(achframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=50)
     copyright.place(x=0,y=1200)
@@ -527,18 +502,18 @@ def showfee():
         webbrowser.open("https://www.twn.my/")
     def ps():
         webbrowser.open("https://www.project-syndicate.org/")
-    Button(feeframe,text="Union Public Service Commission",command=upsc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=530)
-    Button(feeframe,text="Down to Earth",command=down_to_earth,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=570)
-    Button(feeframe,text="Press Information Bureau",command=pib,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=610)
-    Button(feeframe,text='''Department of Administrative Reforms
+    Button(feeframe,cursor='hand2',text="Union Public Service Commission",command=upsc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=530)
+    Button(feeframe,cursor='hand2',text="Down to Earth",command=down_to_earth,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=570)
+    Button(feeframe,cursor='hand2',text="Press Information Bureau",command=pib,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=610)
+    Button(feeframe,cursor='hand2',text='''Department of Administrative Reforms
     and Public Grievances''',command=darpg,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=650)
-    Button(feeframe,text='''Lal Bahadur Shastri National
+    Button(feeframe,cursor='hand2',text='''Lal Bahadur Shastri National
         Academy of Administration''',command=lbsnaa,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=710)
-    Button(feeframe,text='''United Nations Framework
+    Button(feeframe,cursor='hand2',text='''United Nations Framework
     Convention on Climate Change''',command=unfccc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=770)
-    Button(feeframe,text="World Bank",command=wb,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=830)
-    Button(feeframe,text="Third World Network",command=twn,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=870)
-    Button(feeframe,text="Project Syndicate",command=ps,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=910)
+    Button(feeframe,cursor='hand2',text="World Bank",command=wb,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=830)
+    Button(feeframe,cursor='hand2',text="Third World Network",command=twn,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=870)
+    Button(feeframe,cursor='hand2',text="Project Syndicate",command=ps,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=910)
 
 
     copyright = Label(feeframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=50)
@@ -633,18 +608,18 @@ def showfacility():
         webbrowser.open("https://www.twn.my/")
     def ps():
         webbrowser.open("https://www.project-syndicate.org/")
-    Button(facilityframe,text="Union Public Service Commission",command=upsc,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=520)
-    Button(facilityframe,text="Down to Earth",command=down_to_earth,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=580)
-    Button(facilityframe,text="Press Information Bureau",command=pib,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=640)
-    Button(facilityframe,text='''Department of Administrative Reforms
+    Button(facilityframe,cursor='hand2',text="Union Public Service Commission",command=upsc,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=520)
+    Button(facilityframe,cursor='hand2',text="Down to Earth",command=down_to_earth,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=580)
+    Button(facilityframe,cursor='hand2',text="Press Information Bureau",command=pib,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=640)
+    Button(facilityframe,cursor='hand2',text='''Department of Administrative Reforms
     and Public Grievances''',command=darpg,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=700)
-    Button(facilityframe,text='''Lal Bahadur Shastri National
+    Button(facilityframe,cursor='hand2',text='''Lal Bahadur Shastri National
         Academy of Administration''',command=lbsnaa,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=780)
-    Button(facilityframe,text='''United Nations Framework
+    Button(facilityframe,cursor='hand2',text='''United Nations Framework
     Convention on Climate Change''',command=unfccc,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=860)
-    Button(facilityframe,text="World Bank",command=wb,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=940)
-    Button(facilityframe,text="Third World Network",command=twn,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1000)
-    Button(facilityframe,text="Project Syndicate",command=ps,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1060)
+    Button(facilityframe,cursor='hand2',text="World Bank",command=wb,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=940)
+    Button(facilityframe,cursor='hand2',text="Third World Network",command=twn,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1000)
+    Button(facilityframe,cursor='hand2',text="Project Syndicate",command=ps,width=35,fg="dark blue",font="Lucida 14 bold",bg="azure4").place(x=790,y=1060)
 
     copyright = Label(facilityframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=50)
     copyright.place(x=0,y=1650)
@@ -686,13 +661,17 @@ def showfaculty():
 
     Label(facultyframe,text='''We have a panel of expert and experienced academicians,
     well versed with the requirements of the UPSC to broadbase the candidates’ knowledge
-    and provide the required academic thrust to the aspirants. This panel also includes top
-    ex-bureaucrats and media personalities who spare no pain in guiding the HSC
-    candidates and leave no stone unturned in ensuring the candidates’ success.
-    In aexecutequerryition to the above there are also 4 in-house Academic Associates who help the
-    candidates in sourcing study materials, and preparing for the UPSC examinations.
-    They set up periodical test papers, conduct tests, and arrange for evaluation of the
-    test papers by external examiners.'''
+    and provide the required academic thrust to the aspirants.
+    This panel also includes top  ex-bureaucrats and media
+    personalities who spare no pain in guiding the HSC
+    candidates and leave no stone unturned in ensuring
+    the candidates’ success.In addition to the above there
+    are also 4 in-house Academic Associates who help the
+    candidates in sourcing study materials, and preparing
+    for the UPSC examinations.
+    They set up periodical test papers, conduct tests,
+    and arrange for evaluation of the test papers by
+    external examiners.'''
         ,fg="black",font="Calibri 18 ",bg="light skyblue3").place(x=50,y=650)
 
     Label(facultyframe,text="-External Links",bg="dark slate gray",fg="white",font="Bernard_MT 30 underline").place(x=980,y=460)
@@ -715,22 +694,22 @@ def showfaculty():
         webbrowser.open("https://www.twn.my/")
     def ps():
         webbrowser.open("https://www.project-syndicate.org/")
-    Button(facultyframe,text="Union Public Service Commission",command=upsc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=530)
-    Button(facultyframe,text="Down to Earth",command=down_to_earth,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=570)
-    Button(facultyframe,text="Press Information Bureau",command=pib,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=610)
-    Button(facultyframe,text='''Department of Administrative Reforms
+    Button(facultyframe,cursor='hand2',text="Union Public Service Commission",command=upsc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=530)
+    Button(facultyframe,cursor='hand2',text="Down to Earth",command=down_to_earth,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=570)
+    Button(facultyframe,cursor='hand2',text="Press Information Bureau",command=pib,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=610)
+    Button(facultyframe,cursor='hand2',text='''Department of Administrative Reforms
     and Public Grievances''',command=darpg,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=650)
-    Button(facultyframe,text='''Lal Bahadur Shastri National
+    Button(facultyframe,cursor='hand2',text='''Lal Bahadur Shastri National
         Academy of Administration''',command=lbsnaa,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=710)
-    Button(facultyframe,text='''United Nations Framework
+    Button(facultyframe,cursor='hand2',text='''United Nations Framework
     Convention on Climate Change''',command=unfccc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=770)
-    Button(facultyframe,text="World Bank",command=wb,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=830)
-    Button(facultyframe,text="Third World Network",command=twn,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=870)
-    Button(facultyframe,text="Project Syndicate",command=ps,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=910)
+    Button(facultyframe,cursor='hand2',text="World Bank",command=wb,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=830)
+    Button(facultyframe,cursor='hand2',text="Third World Network",command=twn,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=870)
+    Button(facultyframe,cursor='hand2',text="Project Syndicate",command=ps,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=910)
 
 
-    copyright = Label(facultyframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=50)
-    copyright.place(x=0,y=1000)
+    copyright = Label(facultyframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,height=1)
+    copyright.place(x=0,y=1090)
 
     faculty.mainloop()
 
@@ -809,22 +788,21 @@ def showaop():
         webbrowser.open("https://www.twn.my/")
     def ps():
         webbrowser.open("https://www.project-syndicate.org/")
-    Button(aopframe,text="Union Public Service Commission",command=upsc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=530)
-    Button(aopframe,text="Down to Earth",command=down_to_earth,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=570)
-    Button(aopframe,text="Press Information Bureau",command=pib,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=610)
-    Button(aopframe,text='''Department of Administrative Reforms
+    Button(aopframe,cursor='hand2',text="Union Public Service Commission",command=upsc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=530)
+    Button(aopframe,cursor='hand2',text="Down to Earth",command=down_to_earth,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=570)
+    Button(aopframe,cursor='hand2',text="Press Information Bureau",command=pib,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=610)
+    Button(aopframe,cursor='hand2',text='''Department of Administrative Reforms
     and Public Grievances''',command=darpg,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=650)
-    Button(aopframe,text='''Lal Bahadur Shastri National
+    Button(aopframe,cursor='hand2',text='''Lal Bahadur Shastri National
         Academy of Administration''',command=lbsnaa,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=710)
-    Button(aopframe,text='''United Nations Framework
+    Button(aopframe,cursor='hand2',text='''United Nations Framework
     Convention on Climate Change''',command=unfccc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=770)
-    Button(aopframe,text="World Bank",command=wb,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=830)
-    Button(aopframe,text="Third World Network",command=twn,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=870)
-    Button(aopframe,text="Project Syndicate",command=ps,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=910)
+    Button(aopframe,cursor='hand2',text="World Bank",command=wb,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=830)
+    Button(aopframe,cursor='hand2',text="Third World Network",command=twn,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=870)
+    Button(aopframe,cursor='hand2',text="Project Syndicate",command=ps,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=910)
 
-
-    copyright = Label(aopframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=50)
-    copyright.place(x=0,y=1250)
+    copyright = Label(aopframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=5)
+    copyright.place(x=0,y=1330)
 
     aop.mainloop()
 def showfounder():
@@ -911,18 +889,18 @@ def showfounder():
         webbrowser.open("https://www.twn.my/")
     def ps():
         webbrowser.open("https://www.project-syndicate.org/")
-    Button(founderframe,text="Union Public Service Commission",command=upsc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=930)
-    Button(founderframe,text="Down to Earth",command=down_to_earth,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=970)
-    Button(founderframe,text="Press Information Bureau",command=pib,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1010)
-    Button(founderframe,text='''Department of Administrative Reforms
+    Button(founderframe,cursor='hand2',text="Union Public Service Commission",command=upsc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=930)
+    Button(founderframe,cursor='hand2',text="Down to Earth",command=down_to_earth,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=970)
+    Button(founderframe,cursor='hand2',text="Press Information Bureau",command=pib,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1010)
+    Button(founderframe,cursor='hand2',text='''Department of Administrative Reforms
     and Public Grievances''',command=darpg,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1050)
-    Button(founderframe,text='''Lal Bahadur Shastri National
+    Button(founderframe,cursor='hand2',text='''Lal Bahadur Shastri National
         Academy of Administration''',command=lbsnaa,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1110)
-    Button(founderframe,text='''United Nations Framework
+    Button(founderframe,cursor='hand2',text='''United Nations Framework
     Convention on Climate Change''',command=unfccc,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1170)
-    Button(founderframe,text="World Bank",command=wb,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1230)
-    Button(founderframe,text="Third World Network",command=twn,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1270)
-    Button(founderframe,text="Project Syndicate",command=ps,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1310)
+    Button(founderframe,cursor='hand2',text="World Bank",command=wb,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1230)
+    Button(founderframe,cursor='hand2',text="Third World Network",command=twn,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1270)
+    Button(founderframe,cursor='hand2',text="Project Syndicate",command=ps,width=25,fg="dark blue",font="Lucida 12 bold",bg="azure4").place(x=980,y=1310)
 
 
     copyright = Label(founderframe,text="© Copyright 2019 Hamdard Study Circle. All Rights Reserved.",bg="black",fg="white",width=200,pady=50)
@@ -991,42 +969,41 @@ def showhome():
 def navbar(framev):
     navigation = Frame(framev,bg="dark blue",bd=10)
     navigation.place(x=260,y=0)
-    home = Button(navigation,text="Home",fg="white",bg="dark blue",font="lucida 12 underline",height=5,border=0,command=showhome)
+    home = Button(navigation,cursor='hand2',text="Home",fg="white",bg="dark blue",font="lucida 12 underline",height=5,border=0,command=showhome)
     home.pack(side=LEFT,padx=18)
     def about():
         def toggle_button():
             advcb.place_forget()
             fonb.place_forget()
             cofob.place_forget()
-        # f=Frame(main,width=165,height=85).place(x=350,y=80)
-        advcb=Button(framev,text="Advisory Committee",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),showadvisory()])
+        advcb=Button(framev,cursor='hand2',text="Advisory Committee",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),showadvisory()])
         advcb.place(x=350,y=80)
-        fonb=Button(framev,text="The Founder",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),showfounder()])
+        fonb=Button(framev,cursor='hand2',text="The Founder",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),showfounder()])
         fonb.place(x=350,y=106)
-        cofob=Button(framev,text="Co-founder",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),showcofounder()])
+        cofob=Button(framev,cursor='hand2',text="Co-founder",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),showcofounder()])
         cofob.place(x=350,y=132)
 
-    home = Button(navigation,text="About HSC",fg="white",bg="dark blue",command=about,font="lucida 12 underline",border=0)
+    home = Button(navigation,cursor='hand2',text="About HSC",fg="white",bg="dark blue",command=about,font="lucida 12 underline",border=0)
     home.pack(side=LEFT,padx=18)
     def admission():
         def toggle_button():
             aopb.place_forget()
             facb.place_forget()
-        facb=Button(framev,text="Faculty",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),showfaculty()])
+        facb=Button(framev,cursor='hand2',text="Faculty",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),showfaculty()])
         facb.place(x=370,y=80)
-        aopb=Button(framev,text="Admission Procedure",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),showaop()])
+        aopb=Button(framev,cursor='hand2',text="Admission Procedure",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),showaop()])
         aopb.place(x=370,y=110)
-    home=Button(navigation,text="Admission",command=admission,fg="white",bg="dark blue",font="lucida 12 underline",border=0)
+    home=Button(navigation,cursor='hand2',text="Admission",command=admission,fg="white",bg="dark blue",font="lucida 12 underline",border=0)
     home.pack(side=LEFT,padx=18)
-    home = Button(navigation,text="Fee Structure",fg="white",bg="dark blue",font="lucida 12 underline",border=0,command=showfee)
+    home = Button(navigation,cursor='hand2',text="Fee Structure",fg="white",bg="dark blue",font="lucida 12 underline",border=0,command=showfee)
     home.pack(side=LEFT,padx=18)
-    home = Button(navigation,text="Facilities",fg="white",bg="dark blue",font="lucida 12 underline",border=0,command=showfacility)
+    home = Button(navigation,cursor='hand2',text="Facilities",fg="white",bg="dark blue",font="lucida 12 underline",border=0,command=showfacility)
     home.pack(side=LEFT,padx=18)
-    home = Button(navigation,text="Achievements",fg="white",bg="dark blue",font="lucida 12 underline",border=0,command=showachievement)
+    home = Button(navigation,cursor='hand2',text="Achievements",fg="white",bg="dark blue",font="lucida 12 underline",border=0,command=showachievement)
     home.pack(side=LEFT,padx=18)
-    home = Button(navigation,text="Gallery",fg="white",bg="dark blue",font="lucida 12 underline",border=0,command=showgallery)
+    home = Button(navigation,cursor='hand2',text="Gallery",fg="white",bg="dark blue",font="lucida 12 underline",border=0,command=showgallery)
     home.pack(side=LEFT,padx=18)
-    home = Button(navigation,text="Contact",fg="white",bg="dark blue",font="lucida 12 underline",border=0,command=showcontact)
+    home = Button(navigation,cursor='hand2',text="Contact",fg="white",bg="dark blue",font="lucida 12 underline",border=0,command=showcontact)
     home.pack(side=LEFT,padx=18)
     #toggle button
     '''for login'''
@@ -1035,29 +1012,41 @@ def navbar(framev):
             stb.place_forget()
             tb.place_forget()
             adb.place_forget()
-        # f1=Frame(main,width=165,height=85,bg="dark blue").place(x=1200,y=80)
-        stb=Button(framev,text="As student",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),loginstudent()])
+        stb=Button(framev,cursor='hand2',text="As student",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),loginstudent()])
         stb.place(x=1200,y=80)
-        tb=Button(framev,text="As teacher",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),loginteacher()])
+        tb=Button(framev,cursor='hand2',text="As teacher",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),loginteacher()])
         tb.place(x=1200,y=106)
-        adb=Button(framev,text="As admin",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),loginadmin()])
+        adb=Button(framev,cursor='hand2',text="As admin",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),loginadmin()])
         adb.place(x=1200,y=132)
-    home = Button(navigation,text="Login",fg="white",bg="dark blue",font="lucida 12 underline",command=toggle_login,border=0)
+    home = Button(navigation,cursor='hand2',text="Login",fg="white",bg="dark blue",font="lucida 12 underline",command=toggle_login,border=0)
     home.pack(side=LEFT)
     def toggle_singup():
         def toggle_button():
             stb.place_forget()
             tb.place_forget()
             adb.place_forget()
-        # f1=Frame(main,width=165,height=85,bg="dark blue").place(x=1200,y=80)
         stb=Button(framev,text="As student",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),signstudent()])
         stb.place(x=1200,y=80)
-        tb=Button(framev,text="As teacher",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),signteacher()])
+        tb=Button(framev,cursor='hand2',text="As teacher",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button(),signteacher()])
         tb.place(x=1200,y=106)
-        adb=Button(framev,text="As admin",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button()])
+        adb=Button(framev,cursor='hand2',text="As admin",width=16,font="Lucida 12 bold",fg="black",command=lambda:[toggle_button()])
         adb.place(x=1200,y=132)
-    home = Button(navigation,text="Register",command=toggle_singup,fg="white",bg="dark blue",font="lucida 12 underline",border=0)
+    home = Button(navigation,cursor='hand2',text="Register",command=toggle_singup,fg="white",bg="dark blue",font="lucida 12 underline",border=0)
     home.pack(side=LEFT,padx=16)
+
+def showadmindash(user,passw):
+    page.close()
+    adm.deiconify()
+    adm.protocol("WM_DELETE_WINDOW",on_closing)
+    adm.title("Admin Dashboard")
+    adm.geometry("1366x768")
+    screenwidth = adm.winfo_screenwidth()
+    screenheight = adm.winfo_screenheight()
+    print(screenwidth)
+    print(screenheight)
+    adm.wm_iconbitmap("1.ico")
+    adm.geometry(f"{screenwidth}x{screenheight}")
+    
 def showstudentdash(user,passw):
     def study():
         dash.deiconify()
@@ -1086,7 +1075,7 @@ def showstudentdash(user,passw):
         Label(request,font="romania 10 bold",bg="gray80",text="Your request has been forwarded to the Admin.").place(x=5,y=10)
         def ok():
             request.destroy()
-        Button(request,command=ok,text="OK",fg="black",font="romania 10 bold",bg="gray85").place(x=250,y=45)
+        Button(request,cursor='hand2',command=ok,text="OK",fg="black",font="romania 10 bold",bg="gray85").place(x=250,y=45)
 
     def schedule():
         dash.deiconify()
@@ -1099,7 +1088,7 @@ def showstudentdash(user,passw):
         Label(sched,font="romania 10 bold",bg="gray80",text="No information available.").place(x=5,y=10)
         def close():
             sched.destroy()
-            Button(sched,command=close,text="Close",fg="black",font="romania 10 bold",bg="gray85").place(x=120,y=40)
+            Button(sched,cursor='hand2',command=close,text="Close",fg="black",font="romania 10 bold",bg="gray85").place(x=120,y=40)
     def fees():
         dash.deiconify()
         fees=Tk()
@@ -1108,10 +1097,10 @@ def showstudentdash(user,passw):
         fees.resizable(False,False)
         fees.configure(bg="gray80")
         fees.wm_iconbitmap("1.ico")
-        Label(fees,font="romania 10 bold",bg="gray80",text="No information available.KIndly approach admin.").place(x=5,y=10)
+        Label(fees,font="romania 10 bold",bg="gray80",text="No information available.Kindly approach admin.").place(x=5,y=10)
         def closee():
             fees.destroy()
-        Button(fees,command=closee,text="Close",fg="black",font="romania 10 bold",bg="gray75").place(x=260,y=40)
+        Button(fees,cursor='hand2',command=closee,text="Close",fg="black",font="romania 10 bold",bg="gray75").place(x=260,y=40)
     conn=mysql.connector.connect(host="localhost",user="root",password="Rushaan@2006",database="hsc")
     db=conn.cursor()
     db.execute("select * from student_data;")
@@ -1131,7 +1120,7 @@ def showstudentdash(user,passw):
 
 
 
-    pageclose()
+    page.close()
     dash.deiconify()
     dash.protocol("WM_DELETE_WINDOW",on_closing)
     dash.title("Student Dashboard")
@@ -1177,7 +1166,7 @@ def showstudentdash(user,passw):
         activeforeground=c4,highlightthickness=2,
         highlightbackground=c2,highlightcolor="white",
         width=9,height=1,
-        border=5,cursor="hand1",command=edit,text="Edit",font="arial 16 bold")
+        border=5,cursor="hand2",command=edit,text="Edit",font="arial 16 bold")
     button1.place(x=180,y=590)
     dashcc=Canvas(dash,width=screenwidth-550,height=screenheight,bg="gray80")
     dashcc.place(x=550,y=0)
@@ -1187,7 +1176,7 @@ def showstudentdash(user,passw):
     def back():
         dash.destroy()
         main.deiconify()
-    Button(dashcc,text="<<Back To Main Page",font="Italic 15 bold",command=back).place(x=500,y=30)
+    Button(dashcc,cursor='hand2',text="<<Back To Main Page",font="Italic 15 bold",command=back).place(x=500,y=30)
     stu1=Image.open("stu1.jpg") 
     resized_stu1=stu1.resize((200,180),Image.LANCZOS)
     photo_stu1=ImageTk.PhotoImage(resized_stu1)
@@ -1198,7 +1187,7 @@ def showstudentdash(user,passw):
         activeforeground=c4,highlightthickness=2,
         highlightbackground=c2,highlightcolor="white",
         width=200,height=180,
-        border=4,cursor="hand1")
+        border=4,cursor="hand2")
     button2.place(x=160,y=100)
 
     stu2=Image.open("stu2.jpg") 
@@ -1211,7 +1200,7 @@ def showstudentdash(user,passw):
         activeforeground=c4,highlightthickness=2,
         highlightbackground=c2,highlightcolor="white",
         width=200,height=180,
-        border=4,cursor="hand1")
+        border=4,cursor="hand2")
     button3.place(x=450,y=100)
 
     stu3=Image.open("stu3.jpg") 
@@ -1224,7 +1213,7 @@ def showstudentdash(user,passw):
         activeforeground=c4,highlightthickness=2,
         highlightbackground=c2,highlightcolor="white",
         width=200,height=180,
-        border=4,cursor="hand1")
+        border=4,cursor="hand2")
     button4.place(x=160,y=380)
 
     stu4=Image.open("stu4.png") 
@@ -1237,7 +1226,7 @@ def showstudentdash(user,passw):
         activeforeground=c4,highlightthickness=2,
         highlightbackground=c2,highlightcolor="white",
         width=200,height=180,
-        border=4,cursor="hand1")
+        border=4,cursor="hand2")
     button5.place(x=450,y=380)
 
     dash.mainloop()
@@ -1310,19 +1299,19 @@ def loginstudent():
         highlightthickness=2,
         highlightbackground="black",
         highlightcolor="white",width=15,height=1,
-        border=2,cursor="hand1").place(x=685,y=240)
+        border=2,cursor="hand2").place(x=685,y=240)
 
     stlog_log=Image.open("login.png") 
     resized_stlog_log=stlog_log.resize((270,160),Image.LANCZOS)
     photo_stlog_log=ImageTk.PhotoImage(resized_stlog_log)
     Button(stlog,image=photo_stlog_log,bg="black",
-    highlightthickness=2,border=1,cursor="hand1",width=210,height=25,command=login).place(x=570,y=290)
+    highlightthickness=2,border=1,cursor="hand2",width=210,height=25,command=login).place(x=570,y=290)
 
     stlog_sign=Image.open("signup.jpg") 
     resized_stlog_sign=stlog_sign.resize((270,160),Image.LANCZOS)
     photo_stlog_sign=ImageTk.PhotoImage(resized_stlog_sign)
     Button(stlog,image=photo_stlog_sign,bg="black",
-    highlightthickness=2,border=1,cursor="hand1",width=210,height=25).place(x=570,y=360)
+    highlightthickness=2,border=1,cursor="hand2",width=210,height=25).place(x=570,y=360)
 
     stlog.mainloop()
 def showteacherdash(user,passw):
@@ -1350,7 +1339,7 @@ def showteacherdash(user,passw):
         Label(tea_edit,font="romania 10 bold",bg="gray80",text="Your request has been forwarded to the Admin.").place(x=5,y=10)
         def tea_ok():
             tea_edit.destroy()
-        Button(tea_edit,command=tea_ok,text="OK",fg="black",font="romania 10 bold",bg="gray85").place(x=250,y=45)
+        Button(tea_edit,command=tea_ok,text="OK",fg="black",font="romania 10 bold",bg="gray85",cursor='hand2').place(x=250,y=45)
 
     def tea_schedule():
         tea.deiconify()
@@ -1363,7 +1352,7 @@ def showteacherdash(user,passw):
         Label(tea_sched,font="romania 10 bold",bg="gray80",text="No information available.").place(x=5,y=10)
         def tea_close():
             tea_sched.destroy()
-        Button(tea_sched,command=tea_close,text="Close",fg="black",font="romania 10 bold",bg="gray85").place(x=120,y=40)
+        Button(tea_sched,command=tea_close,text="Close",fg="black",font="romania 10 bold",bg="gray85",cursor='hand2').place(x=120,y=40)
     def salary():
         tea.deiconify()
         tea_sal=Tk()
@@ -1375,7 +1364,7 @@ def showteacherdash(user,passw):
         Label(tea_sal,font="romania 10 bold",bg="gray80",text="Not updated").place(x=5,y=10)
         def tea_sal_ok():
             tea_sal.destroy()
-        Button(tea_sal,command=tea_sal_ok,text="OK",fg="black",font="romania 10 bold",bg="gray85").place(x=250,y=45)
+        Button(tea_sal,command=tea_sal_ok,text="OK",fg="black",font="romania 10 bold",bg="gray85",cursor='hand2').place(x=250,y=45)
     conn=mysql.connector.connect(host="localhost",user="root",password="Rushaan@2006",database="hsc")
     db=conn.cursor()
     db.execute("select * from teacher_data;")
@@ -1454,7 +1443,7 @@ def showteacherdash(user,passw):
         activeforeground=c4,highlightthickness=2,
         highlightbackground=c2,highlightcolor="white",
         width=9,height=1,
-        border=5,cursor="hand1",command=tea_edit,text="Edit",font="arial 16 bold")
+        border=5,cursor="hand2",command=tea_edit,text="Edit",font="arial 16 bold")
     button1.place(x=180,y=590)
     teac=Canvas(tea,width=screenwidth-550,height=screenheight,bg="gray80")
     teac.place(x=550,y=0)
@@ -1464,7 +1453,7 @@ def showteacherdash(user,passw):
     def back():
         tea.destroy()
         main.deiconify()
-    Button(teac,text="<<Back To Main Page",font="Italic 15 bold",command=back).place(x=500,y=30)
+    Button(teac,text="<<Back To Main Page",font="Italic 15 bold",command=back,cursor='hand2').place(x=500,y=30)
 
     tea1=Image.open("tea1.jpg") 
     resized_tea1=tea1.resize((200,180),Image.LANCZOS)
@@ -1476,7 +1465,7 @@ def showteacherdash(user,passw):
         activeforeground=c4,highlightthickness=2,
         highlightbackground=c2,highlightcolor="white",
         width=200,height=180,
-        border=4,cursor="hand1")
+        border=4,cursor="hand2")
     button2.place(x=160,y=100)
 
     tea2=Image.open("tea2.jpg") 
@@ -1489,7 +1478,7 @@ def showteacherdash(user,passw):
         activeforeground=c4,highlightthickness=2,
         highlightbackground=c2,highlightcolor="white",
         width=200,height=180,
-        border=4,cursor="hand1")
+        border=4,cursor="hand2")
     button3.place(x=450,y=100)
     tea3=Image.open("tea3.jpg") 
     resized_tea3=tea3.resize((200,180),Image.LANCZOS)
@@ -1501,7 +1490,7 @@ def showteacherdash(user,passw):
         activeforeground=c4,highlightthickness=2,
         highlightbackground=c2,highlightcolor="white",
         width=200,height=180,
-        border=4,cursor="hand1")
+        border=4,cursor="hand2")
     button4.place(x=160,y=380)
 
     tea4=Image.open("tea4.png") 
@@ -1514,7 +1503,7 @@ def showteacherdash(user,passw):
         activeforeground=c4,highlightthickness=2,
         highlightbackground=c2,highlightcolor="white",
         width=200,height=180,
-        border=4,cursor="hand1")
+        border=4,cursor="hand2")
     button5.place(x=450,y=380)
     tea.mainloop()
 def loginteacher():
@@ -1586,19 +1575,19 @@ def loginteacher():
         highlightthickness=2,
         highlightbackground="black",
         highlightcolor="white",width=15,height=1,
-        border=2,cursor="hand1").place(x=685,y=240)
+        border=2,cursor="hand2").place(x=685,y=240)
 
     tchlog_log=Image.open("login.png") 
     resized_tchlog_log=tchlog_log.resize((270,160),Image.LANCZOS)
     photo_tchlog_log=ImageTk.PhotoImage(resized_tchlog_log)
     Button(tchlog,image=photo_tchlog_log,bg="black",
-        highlightthickness=2,border=1,cursor="hand1",width=210,height=25,command=login).place(x=570,y=290)
+        highlightthickness=2,border=1,cursor="hand2",width=210,height=25,command=login).place(x=570,y=290)
 
     tchlog_sign=Image.open("signup.jpg") 
     resized_tchlog_sign=tchlog_sign.resize((270,160),Image.LANCZOS)
     photo_tchlog_sign=ImageTk.PhotoImage(resized_tchlog_sign)
     Button(tchlog,image=photo_tchlog_sign,bg="black",
-        highlightthickness=2,border=1,cursor="hand1",width=210,height=25).place(x=570,y=360)
+        highlightthickness=2,border=1,cursor="hand2",width=210,height=25).place(x=570,y=360)
 
     tchlog.mainloop()
 
@@ -1651,7 +1640,7 @@ def loginadmin():
         Label(forgot,font="century 10 bold",bg="gray99",text="Your new password has been sent to your mail id.").place(x=5,y=10)
         def dialog_close():
             forgot.destroy()
-        Button(forgot,command=dialog_close,text="Close",activebackground="gray75",fg="thistle4",font="century 10",bg="gray99").place(x=300,y=40)
+        Button(forgot,cursor='hand2',command=dialog_close,text="Close",activebackground="gray75",fg="thistle4",font="century 10",bg="gray99").place(x=300,y=40)
 
 
     Button(adminlog,text="Forgot password?",
@@ -1661,19 +1650,19 @@ def loginadmin():
         highlightthickness=2,
         highlightbackground="black",
         highlightcolor="white",width=15,height=1,
-        border=2,cursor="hand1",command=forgot).place(x=685,y=240)
+        border=2,cursor="hand2",command=forgot).place(x=685,y=240)
 
     adminlog_log=Image.open("login.png") 
     resized_adminlog_log=adminlog_log.resize((270,160),Image.LANCZOS)
     photo_adminlog_log=ImageTk.PhotoImage(resized_adminlog_log)
     Button(adminlog,image=photo_adminlog_log,bg="black",
-        highlightthickness=2,border=1,cursor="hand1",width=210,height=25).place(x=570,y=290)
+        highlightthickness=2,border=1,cursor="hand2",width=210,height=25).place(x=570,y=290)
 
     adminlog_sign=Image.open("signup.jpg") 
     resized_adminlog_sign=adminlog_sign.resize((270,160),Image.LANCZOS)
     photo_adminlog_sign=ImageTk.PhotoImage(resized_adminlog_sign)
     Button(adminlog,image=photo_adminlog_sign,bg="black",
-        highlightthickness=2,border=1,cursor="hand1",width=210,height=25).place(x=570,y=360)
+        highlightthickness=2,border=1,cursor="hand2",width=210,height=25).place(x=570,y=360)
 
     adminlog.mainloop()
 
@@ -1681,52 +1670,44 @@ def signstudent():
     pageclose()
     sgst.deiconify()
     sgst.protocol("WM_DELETE_WINDOW",on_closing)
-    sgst.title("Student Singup")
-    screenwidth = 850
-    screenheight =600
+    sgst.title("Student Signup")
+    screenwidth = 920
+    screenheight =550
     sgst.geometry(f"{screenwidth}x{screenheight}")
     sgst.resizable(False,False)
     sgst.configure(bg="white")
     print(screenwidth)
     print(screenheight)
-    canvas =Canvas(sgst,bg="lavender",height=screenheight,width=screenwidth)
-    canvas.pack(fill=X)
-    background_image = PhotoImage(file="33.png")
-    canvas.create_image(0, 0, anchor=NW, image=background_image)
+    canvas =Canvas(sgst,width=420,bg="plum4",height=screenheight)
+    canvas.place(x=0,y=0)
+    resized_bg=Image.open("34.png").resize((405,533),Image.LANCZOS)
+    background_image = ImageTk.PhotoImage(resized_bg)
+    canvas.create_image(10, 10, anchor=NW, image=background_image)
     canvas.background = background_image
-
-    Label(canvas,text="Sing Up",font="algerian 30 underline",fg="white",bg="firebrick4").place(x=screenwidth/2-50,y=10)
-    Label(canvas,text="Name :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=80)
-    Label(canvas,text="Course :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=150-20)
-    Label(canvas,text="Phone No :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=200-20)
-    Label(canvas,text="Father :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=250-20)
-    Label(canvas,text="Mother :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=300-20)
-    Label(canvas,text="D.O.B :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=350-20)
-    Label(canvas,text="Joining Date :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=400-20)
-    Label(canvas,text="Validity :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=450-20)
-    Label(canvas,text="Username :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=500-20)
-    Label(canvas,text="Password :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=550-20)
-
-    name=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    name.place(x=250,y=80)
-    course=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    course.place(x=250,y=130)
-    phone=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    phone.place(x=250,y=180)
-    father=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    father.place(x=250,y=230)
-    mother=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    mother.place(x=250,y=280)
-    dob=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    dob.place(x=250,y=330)
-    jod=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    jod.place(x=250,y=380)
-    vod=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    vod.place(x=250,y=430)
-    newuser=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    newuser.place(x=250,y=480)
-    newpassw=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    newpassw.place(x=250,y=530)
+    Label(sgst,text="SIGN UP",font="algerian 30 underline",fg="firebrick4",bg="white").place(x=600,y=30)
+    Label(sgst,text="Name : ",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=90)
+    entry1=Entry(sgst,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=93)
+    Label(sgst,text='''Mob.No:''',font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=130)
+    entry1=Entry(sgst,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=133)
+    Label(sgst,text="Course : ",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=170)
+    entry1=Entry(sgst,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=173)
+    Label(sgst,text="Father's Name:",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=205)
+    entry1=Entry(sgst,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=212)
+    Label(sgst,text="Mother's Name:",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=240)
+    entry1=Entry(sgst,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=245)
+    Label(sgst,text="Password:",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=275)
+    entry1=Entry(sgst,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=285)
+    Label(sgst,text="Confirm Pswd :",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=310)
+    entry1=Entry(sgst,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=315)
+    Button(sgst,text='Sign up',fg='white',bg='plum4',font='calibri 13',cursor='hand2',
+           activeforeground='salmon',highlightthickness=2,highlightbackground='plum2',highlightcolor="white",).place(x=635,y=360)
     canvas.create_line(600,0,600,screenheight,width=7,fill="firebrick4")
     canvas.create_line(600,screenheight/2,screenwidth,screenheight/2,width=7,fill="firebrick4")
 
@@ -1753,67 +1734,60 @@ def signstudent():
     resized_tchlog_log=tchlog_log.resize((200,250),Image.LANCZOS)
     photo_tchlog_log=ImageTk.PhotoImage(resized_tchlog_log)
     Button(canvas,image=photo_tchlog_log,bg="black",
-        highlightthickness=2,border=1,cursor="hand1",width=200,height=250,command=loginstudent).place(x=620,y=screenheight/2+25)
+        highlightthickness=2,border=1,cursor="hand2",width=200,height=250,command=loginstudent).place(x=620,y=screenheight/2+25)
 
     tchlog_sign=Image.open("signup.jpg") 
     resized_tchlog_sign=tchlog_sign.resize((200,250),Image.LANCZOS)
     photo_tchlog_sign=ImageTk.PhotoImage(resized_tchlog_sign)
     Button(canvas,image=photo_tchlog_sign,bg="black",
-        highlightthickness=2,border=1,cursor="hand1",width=200,height=250,command=insertdata).place(x=620,y=25)
+        highlightthickness=2,border=1,cursor="hand2",width=200,height=250,command=insertdata).place(x=620,y=25)
 
     sgst.mainloop()
 def signteacher():
     pageclose()
     sgtc.deiconify()
     sgtc.protocol("WM_DELETE_WINDOW",on_closing)
-    sgtc.title("Teacher Singup")
-    screenwidth = 850
-    screenheight =600
+    sgtc.title("Teacher Signup")
+    screenwidth = 920
+    screenheight =550
     sgtc.geometry(f"{screenwidth}x{screenheight}")
     sgtc.resizable(False,False)
     sgtc.configure(bg="white")
     print(screenwidth)
     print(screenheight)
-    canvas =Canvas(sgtc,bg="lavender",height=screenheight,width=screenwidth)
-    canvas.pack(fill=X)
-    background_image = PhotoImage(file="33.png")
-    canvas.create_image(0, 0, anchor=NW, image=background_image)
-    canvas.background = background_image
-
-    Label(canvas,text="Sing Up",font="algerian 30 underline",fg="white",bg="firebrick4").place(x=screenwidth/2-50,y=10)
-    Label(canvas,text="Name :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=80)
-    Label(canvas,text="Course :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=150-20)
-    Label(canvas,text="Phone No :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=200-20)
-    Label(canvas,text="Father :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=250-20)
-    Label(canvas,text="Mother :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=300-20)
-    Label(canvas,text="D.O.B :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=350-20)
-    Label(canvas,text="Joining Date :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=400-20)
-    Label(canvas,text="Extension :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=450-20)
-    Label(canvas,text="Username :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=500-20)
-    Label(canvas,text="Password :- ",font="algerian 20 underline",fg="white",bg="gray17").place(x=50,y=550-20)
-
-    name=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    name.place(x=250,y=80)
-    course=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    course.place(x=250,y=130)
-    phone=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    phone.place(x=250,y=180)
-    father=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    father.place(x=250,y=230)
-    mother=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    mother.place(x=250,y=280)
-    dob=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    dob.place(x=250,y=330)
-    jod=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    jod.place(x=250,y=380)
-    extension=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    extension.place(x=250,y=430)
-    newuser=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    newuser.place(x=250,y=480)
-    newpassw=Entry(canvas,border=3,font="century 18",fg="white",width=25,bg="gray60")
-    newpassw.place(x=250,y=530)
+    canvas =Canvas(sgtc,width=420,bg="plum4",height=screenheight)
+    canvas.place(x=0,y=0)
+    resized_bg_sgtc=Image.open("34.png").resize((405,533),Image.LANCZOS)
+    background_image_sgtc = ImageTk.PhotoImage(resized_bg_sgtc)
+    canvas.create_image(10, 10, anchor=NW, image=background_image_sgtc)
+    canvas.background = background_image_sgtc
+    Label(sgtc,text="SIGN UP",font="algerian 30 underline",fg="firebrick4",bg="white").place(x=600,y=30)
+    Label(sgtc,text="Name : ",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=90)
+    entry1=Entry(sgtc,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=93)
+    Label(sgtc,text='''Mob.No:''',font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=130)
+    entry1=Entry(sgtc,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=133)
+    Label(sgst,text="Subject : ",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=170)
+    entry1=Entry(sgtc,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=173)
+    Label(sgtc,text="Joining date:",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=205)
+    entry1=Entry(sgtc,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=212)
+    Label(sgtc,text="Extension:",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=240)
+    entry1=Entry(sgtc,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=245)
+    Label(sgtc,text="Password:",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=275)
+    entry1=Entry(sgtc,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=285)
+    Label(sgtc,text="Confirm Pswd :",font="catholic 15 bold",fg="plum4",bg="white").place(x=460,y=310)
+    entry1=Entry(sgtc,border=1,font="century 9 bold",fg="gray1",width=30,bg="white")
+    entry1.place(x=612,y=315)
+    Button(sgtc,text='Sign up',fg='white',bg='plum4',font='calibri 13',cursor='hand2',
+           activeforeground='salmon',highlightthickness=2,highlightbackground='plum2',highlightcolor="white",).place(x=635,y=360)
     canvas.create_line(600,0,600,screenheight,width=7,fill="firebrick4")
     canvas.create_line(600,screenheight/2,screenwidth,screenheight/2,width=7,fill="firebrick4")
+
 
     def insertdata():
         conn=mysql.connector.connect(host="localhost",user="root",password="Rushaan@2006",database="hsc")
@@ -1835,14 +1809,14 @@ def signteacher():
     tchlog_log=Image.open("login.png") 
     resized_tchlog_log=tchlog_log.resize((200,250),Image.LANCZOS)
     photo_tchlog_log=ImageTk.PhotoImage(resized_tchlog_log)
-    Button(canvas,image=photo_tchlog_log,bg="black",
-        highlightthickness=2,border=1,cursor="hand1",width=200,height=250,command=loginteacher).place(x=620,y=screenheight/2+25)
+    Button(tchlog,cursor='hand2',image=photo_tchlog_log,bg="black",highlightthickness=2,border=1,width=200,height=250,
+    command=loginteacher).place(x=620,y=screenheight/2+25)
 
     tchlog_sign=Image.open("signup.jpg") 
     resized_tchlog_sign=tchlog_sign.resize((200,250),Image.LANCZOS)
     photo_tchlog_sign=ImageTk.PhotoImage(resized_tchlog_sign)
     Button(canvas,image=photo_tchlog_sign,bg="black",
-        highlightthickness=2,border=1,cursor="hand1",width=200,height=250,command=insertdata).place(x=620,y=25)
+        highlightthickness=2,border=1,cursor="hand2",width=200,height=250,command=insertdata).place(x=620,y=25)
     sgtc.mainloop()
 
 main=Tk()
@@ -1928,7 +1902,7 @@ canvas2=Canvas(mainframe,height=50,width=screenwidth)
 canvas2.place(x=10,y=405)
 canvas_text = canvas2.create_text(10, 10, text='', anchor=NW, font=("Bernard_MT" ,15), fill="black")
 
-test_string = "THE LIST OF SELECTED CANDIDATES FOR UPSC C.S. PRELIMS COACHING PROGRAMME 23-24 RELEASED. PLEASE SEE THE DETAILS IN “LATEST NEWS & EVENT"
+test_string = "THE LIST OF SELECTED CANDIDATES FOR UPSC C.S. PRELIMS COACHING PROGRAMME 23-24 RELEASED. \nPLEASE SEE THE DETAILS IN “LATEST NEWS & EVENT"
 
 #Time delay between chars, in milliseconds
 delta = 100 
@@ -1938,8 +1912,23 @@ for i in range(len(test_string) + 1):
     update_text = lambda s=s: canvas2.itemconfigure(canvas_text, text=s)
     canvas2.after(delay, update_text)
     delay += delta
-Label(mainframe,text="WELCOME TO HUMDARD STUDY CIRCLE",bg="dark slate gray",fg="white",font="Bernard_MT 30 underline",justify=CENTER).place(x=50,y=450)
-Label(mainframe,text='''Arise, awake and stop not till the goal is reached''',fg="black",bg="light skyblue3",font="Candara 20 italic").place(x=50,y=520)
+Label(mainframe,text="WELCOME TO HSC",bg="dark slate gray",fg="white",font="Bernard_MT 30 underline",justify=CENTER).place(x=450,y=490)
+Label(mainframe,text='''HAMDARD STUDY CIRCLE''',fg="white",bg="dark slate gray",font="Candara 20 italic").place(x=450,y=550)
+Label(mainframe,text='''Arise, awake and stop not till the goal
+is reached''',fg="blue4",bg="lavender",font="Candara 24 italic").place(x=450,y=600)
+Label(mainframe,text='''The Hamdard Study Circle (HSC) was set up in 1991 by
+Janab Hakeem Abdul Hameed Saheb together with Janab Saiyid Hamid Saheb
+for coaching candidates from minority communities and backward classes for
+the Indian Civil Services.
+Over the last 32 years, the Hamdard Study Circle has created a niche for itself
+and is seen as one of the leading coaching centers for the civil services in the country.
+It has sent 681 candidates to the Indian Civil Services since inception.
+The coaching programme which runs round the year covers all the 3 stages of
+the UPSC examinations: Preliminary, Mains and Personality Test.''',fg='black',bg='light skyblue3',font='Candara 18 italic',justify=CENTER).place(x=450,y=750)
 
-
+'''newl=Label(newf,text="  IMPORTANT LINKS  ",bg="darkgoldenrod2",fg="black",font="Bernard_MT 20",justify=CENTER,relief='ridge',
+      borderwidth=1).place(x=5,y=490)
+Button(newl,text='  Vision and Mission  ',fg="black",font="Bernard_MT 10").place(x=5,y=520)
+'''
+ 
 main.mainloop()
